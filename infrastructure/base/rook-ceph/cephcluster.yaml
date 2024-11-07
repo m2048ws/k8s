@@ -1,0 +1,22 @@
+apiVersion: ceph.rook.io/v1
+kind: CephCluster
+metadata:
+  name: rook-ceph
+  namespace: rook-ceph
+spec:
+  cephVersion:
+    image: ceph/ceph:v18.2.4  # Use a stable version of Ceph
+  dataDirHostPath: /var/lib/rook
+  network:
+    hostNetwork: false
+  mon:
+    count: 3  # Number of monitor pods (for HA, use at least 3)
+    allowMultiplePerNode: false
+  dashboard:
+    enabled: true  # Enable the Ceph dashboard for easy monitoring
+    ssl: true
+  storage:
+    useAllNodes: false  # Set to true to use all nodes automatically
+    useAllDevices: false  # Set to true to use all available devices on each node
+    nodes: []  # Define nodes explicitly in environment-specific overlays
+  resources:
