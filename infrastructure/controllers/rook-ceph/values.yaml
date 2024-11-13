@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rook-ceph-helm-chart-value-overrides
+  namespace: rook-ceph-system
+data:
+  values.yaml: |-
