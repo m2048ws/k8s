@@ -66,7 +66,7 @@ data:
       enableOBCs: false
 
     # -- If true, create & use PSP resources
-    pspEnable: false
+    pspEnable: true
 
     # -- Set the priority class for the rook operator deployment if desired
     priorityClassName:
