@@ -22,6 +22,13 @@ spec:
       retries: -1 # keep trying to remediate
     crds: CreateReplace # Upgrade CRDs on package update
   releaseName: rook-ceph
+  values:
+    csi:
+      enabled: true
+      rbd:
+        enabled: true
+      cephfs:
+        enabled: true
   valuesFrom:
     - kind: ConfigMap
       name: rook-ceph-helm-chart-value-overrides
