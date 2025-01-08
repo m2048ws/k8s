@@ -4,7 +4,7 @@ metadata:
   name: rook-ceph-helm-chart-value-overrides
   namespace: rook-ceph
 data:
-  values: |-
+  values.yaml: |-
     image:
       # -- Image
       repository: docker.io/rook/ceph
