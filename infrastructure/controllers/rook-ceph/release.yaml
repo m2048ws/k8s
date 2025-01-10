@@ -23,6 +23,8 @@ spec:
     crds: CreateReplace # Upgrade CRDs on package update
   releaseName: rook-ceph
   values:
+    rbac:
+      create: true
     csi:
       enabled: true
       rbd:
