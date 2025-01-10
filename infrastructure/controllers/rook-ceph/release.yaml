@@ -31,6 +31,8 @@ spec:
         enabled: true
       cephfs:
         enabled: true
+    admissionController:
+      enabled: true
   valuesFrom:
     - kind: ConfigMap
       name: rook-ceph-helm-chart-value-overrides
