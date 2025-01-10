@@ -74,6 +74,9 @@ data:
       runAsGroup: 2016
       capabilities:
         drop: ["ALL"]
+      allowPrivilegeEscalation: false
+      seccompProfile:
+        type: RuntimeDefault
     # -- If true, loop devices are allowed to be used for osds in test clusters
     allowLoopDevices: false
     
