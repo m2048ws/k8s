@@ -82,9 +82,9 @@ data:
     
     # Settings for whether to disable the drivers or other daemons if they are not
     # needed
-    admissionController:
-      enabled: true
     csi:
+      admissionController:
+        enabled: true
       # -- Enable Ceph CSI RBD driver
       enableRbdDriver: true
       # -- Enable Ceph CSI CephFS driver
