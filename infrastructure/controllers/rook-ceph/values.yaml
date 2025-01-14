@@ -10,7 +10,7 @@ data:
       repository: docker.io/rook/ceph
       # -- Image tag
       # @default -- `master`
-      tag: v1.16.0
+      tag: v1.16.1
       # -- Image pull policy
       pullPolicy: IfNotPresent
     
@@ -82,6 +82,8 @@ data:
     
     # Settings for whether to disable the drivers or other daemons if they are not
     # needed
+    admissionController:
+      enabled: true
     csi:
       # -- Enable Ceph CSI RBD driver
       enableRbdDriver: true
